@@ -14,7 +14,12 @@
     alert('клик') -->
 
     <script>
+        'use strict';
         
+        let eventButton = document.querySelector('.btn');
+        eventButton.addEventListener('click', function(){
+            alert("клик");
+        });
     </script>
 </body>
 </html>
