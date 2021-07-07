@@ -17,5 +17,13 @@
 
     <!-- Задание. найдите заголовок с id="title" и замените значение id
     на что-то другое. -->
+    <script>
+        'use strict';
+
+        let id = document.getElementById('title');
+        id.remove('id');
+        id.setAttribute('id', 'untitle');
+        console.log(id);
+    </script>
 </body>
 </html>
