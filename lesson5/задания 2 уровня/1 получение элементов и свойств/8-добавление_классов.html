@@ -19,7 +19,14 @@
     -->
 
     <script>
-        
+        'use strict';
+
+        let tagb = document.querySelectorAll('b');
+        tagb.forEach(function(item){
+            if(!(item.classList.contains('sign'))){
+                item.classList.add('sign');
+            };
+        });
     </script>
 </body>
 </html>

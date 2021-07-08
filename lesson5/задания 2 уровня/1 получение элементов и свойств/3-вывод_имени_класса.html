@@ -18,7 +18,12 @@
     -->
 
     <script>
-        
+        'use strict';
+
+        let h2List = document.getElementsByTagName('h2');
+        for (let classH2 of h2List){
+            console.log(classH2.className);
+        };
     </script>
 </body>
 </html>

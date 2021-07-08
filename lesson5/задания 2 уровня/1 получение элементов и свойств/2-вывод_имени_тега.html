@@ -17,7 +17,12 @@
     -->
 
     <script>
+        'use strict';
 
+        let classOne = document.getElementsByClassName('one');
+        for(let tag of classOne){
+            console.log(tag.tagName);
+        };
     </script>
 </body>
 </html>

@@ -16,7 +16,14 @@
     2. Проверьте, есть ли в ссылке текст "ссылка", и если нет, то добавьте. -->
 
     <script>
-        
+        'use strict';
+
+        let linksPage = document.links;
+        for (let text of linksPage) {
+            if(text.textContent !== 'ссылка'){
+                text.innerText = 'ссылка';
+            };
+        };
     </script>
 </body>
 </html>
