@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        'use string';
+
+        function Personage(name, age, skill){
+            this.name = name;
+            this.age = age;
+            this.skill = skill;
+        };
+
+        Personage.prototype.speak = function(){
+            console.log(`I am ${this.name}. And my skill: ${this.skill}!`);
+        };
+
+        function Grandchild(name, age, skill, sex){
+            Personage.call(this, name, age, skill);
+            this.sex = sex;
+        }
+
+        Grandchild.prototype = Object.create(Personage.prototype);
+        Grandchild.prototype.constructor = Grandchild;
+
+        Grandchild.prototype.whine = function(){
+            console.log(`Me ${this.sex}. And I want Jessika!`)
+        }
+
+        const pers1 = new Personage('Rick', 'infinity', 'drunk');
+        pers1.speak();
+
+        const pers2 = new Grandchild('Morty', '14', 'nut', 'boy');
+        pers2.speak();
+        pers2.whine();
+    </Script>
+</body>
+</html>

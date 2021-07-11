@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        // ES5 style
+        function Person(name, age, sex){
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+        };
+
+        Person.prototype.tassty = function(){
+            console.log(this.name + ": I am tassty!" + " And me " + this.age + " And I " + this.sex);
+        };
+
+        const user1 = new Person('Ivan', '16', 'man');
+        console.log(user1.name);
+        console.log(user1.age);
+        console.log(user1.sex);
+        console.log(user1);
+        user1.tassty();
+
+        const user2 = new Person('NessushiyPurgu', '216', 'gnom');
+        console.log(user2.name);
+        console.log(user2.age);
+        console.log(user2.sex);
+        console.log(user2);
+        user2.tassty();
+
+        // ES6 style
+
+        class Hero{
+            constructor(name, age, sex){
+                this.name = name;
+                this.age = age;
+                this.sex = sex;
+            }
+            drunk = function(){
+            console.log(this.name + ": I am drunk!" + " And me " + this.age);
+            };
+        };
+
+        const man1 = new Hero('Rick', 'infinity', 'man');
+        man1.drunk();
+        const man2 = new Hero('Morty', '14', 'man');
+        man2.drunk();
+    </script>
+</body>
+</html>
