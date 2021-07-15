@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        function sum(a, b) {
+            return a + b;
+        }
+
+        function sub(a, b) {
+            return a - b;
+        }
+
+        let multiplication = function(a, b) {
+            return a * b;
+        }
+
+        let division = function(a, b) {
+            return a / b;
+        }
+
+        function mathOperation(a, b, operation) {
+            switch(operation) {
+                case '+': alert('Результат вычеслений: '  + sum(a, b));
+                break;
+                case '-': alert('Результат вычеслений: '  + sub(a, b));
+                break;
+                case '*': alert('Результат вычеслений: '  + multiplication(a, b));
+                break;
+                case '/': alert('Результат вычеслений: '  + division(a, b));
+                break;
+                default: alert('Вы ввели неверное выражение!');
+            }
+        }
+        let a, b;
+        do {
+            a = +prompt('Введите первый операнд.');
+            b = +prompt('Введите второй операнд.');
+            if (isNaN(a) || isNaN(b)) alert('Операнд должен быть числом!');
+        }while(isNaN(a) || isNaN(b));
+        let operation = prompt('Введите оператор.');
+        mathOperation(a, b, operation);
+    </script>
+</body>
+</html>

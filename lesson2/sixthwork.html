@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let num = NaN; // Не понимаю почему так нельзя делать, это работает и никаких негативных последствий не несет.
+        while(isNaN(num) || num < 0){
+            num = +prompt("Введите сумму вклада: ");
+            if(isNaN(num) || num < 0){
+                alert('Введите положительное число!')
+            }            
+        }
+        let lastNumber = num % 10;
+        console.log (lastNumber) ;
+        if (lastNumber == 0 || lastNumber > 4) {
+            alert("Ваша сумма в размере " + num + " рублей зачислена."); //Диапозон  5 - 0
+        }
+        else if (lastNumber > 1 && lastNumber < 5) {
+            alert("Ваша сумма в размере " + num + " рубля зачислена."); //Диапозон 2 - 4
+        }
+        else {
+            alert("Ваша сумма в размере " + num + " рубль зачислена."); // Диапозон 1
+        }
+        
+    </script>
+</body>
+</html>
